@@ -28,11 +28,11 @@
     8. Output: ```NaN```, explanation: numeric conversion 3 - NaN = NaN.
 14. Comparison:
     1. Output: ```true```, explanation: boolean result, string '2' becomes #2 which is greater than 1 which returns true.
-    2. Output: ```false```, explanation: boolean result, 
-    3. Output: ```true```, explanation:
-    4. Output: ```false```, explanation:
-    5. Output: ```false```, explanation:
-    6. Output: ```true```, explanation:
+    2. Output: ```false```, explanation: returns false because it is comparing the string value of 2 and 1, which returns false (2 > 1 in terms of strings)
+    3. Output: ```true```, explanation: since == converts operands into the same type, it compares the integer type of 2 with 2, which returns true.
+    4. Output: ```false```, explanation: since === strictly compares the raw operands (doesn't convert types, keeps them the same), that means the integer 2 is being compared to the string 2, which returns false.
+    5. Output: ```false```, explanation: similar to 3, == converts the operands into similar types, and in this case, true =/= 2.
+    6. Output: ```true```, explanation: because it is comparing a boolean type with another boolean type, it will return true.
 15. The == operator converts operands into the same type before comparing them (assuming they are not the same type beforehand). On the otherhand, the === operator is a strict equality comparison, which will not convert operands, and will return false for operands that are not of a similar type.
 16. Check part2-question16.js
 17. The result is an array with the values: [2, 4, 6], because essentially the program is just multiplying each value in the array by 2. When the program called modifyArray, we used doSomething (a function) as a callback, and doSomething just multiplies each value by 2.
